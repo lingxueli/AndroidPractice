@@ -1,0 +1,56 @@
+Drink water reminder app: add job scheduler for notification, remove button triggered notification
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/.gitignore
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/build.gradle
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/AndroidManifest.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/java/com/example/android/background/MainActivity.java
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/java/com/example/android/background/sync/ReminderTasks.java
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/java/com/example/android/background/sync/ReminderUtilities.java
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/java/com/example/android/background/sync/WaterReminderFirebaseJobService.java
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/java/com/example/android/background/sync/WaterReminderIntentService.java
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/java/com/example/android/background/utilities/NotificationUtils.java
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/java/com/example/android/background/utilities/PreferenceUtilities.java
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-hdpi-v11/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-hdpi-v9/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-hdpi/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-mdpi-v11/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-mdpi-v9/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-mdpi/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-xhdpi-v11/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-xhdpi-v9/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-xhdpi/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-xxhdpi-v11/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-xxhdpi-v9/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable-xxhdpi/ic_drink_notification.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable/ic_cancel_black_24px.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable/ic_local_drink_black_24px.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable/ic_local_drink_grey_120px.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable/ic_power_grey_80px.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/drawable/ic_power_pink_80px.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/layout/activity_main.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/mipmap-hdpi/ic_launcher.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/mipmap-mdpi/ic_launcher.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/values-w820dp/dimens.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/values/colors.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/values/dimens.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/values/strings.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/app/src/main/res/values/styles.xml
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/build.gradle
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/gradle.properties
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/gradle/wrapper/gradle-wrapper.jar
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/gradle/wrapper/gradle-wrapper.properties
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/gradlew
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/gradlew.bat
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/jobdispatcher-release/build.gradle
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/jobdispatcher-release/jobdispatcher-release.aar
+#	new file:   T10.04-Exercise-PeriodicSyncWithJobDispatcher/settings.gradle
+#
